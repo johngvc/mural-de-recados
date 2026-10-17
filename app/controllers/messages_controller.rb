@@ -38,6 +38,12 @@ class MessagesController < ApplicationController
     redirect_to root_path
   end
 
+  def like
+    message = Message.find(params[:id])
+    message.increment!(:likes)
+    redirect_to root_path
+  end
+
   private
 
   def message_params
