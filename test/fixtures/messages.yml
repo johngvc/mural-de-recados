@@ -1,9 +1,9 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+ana:
+  author: Ana
+  content: Meu primeiro recado!
+  color: yellow
 
-one:
-  author: MyString
-  content: MyText
-
-two:
-  author: MyString
-  content: MyText
+bia:
+  author: Bia
+  content: Adorei o workshop!
+  color: pink
