@@ -40,6 +40,6 @@ class MessagesController < ApplicationController
   private
 
   def message_params
-    params.expect(message: [ :author, :content ])
+    params.expect(message: [ :author, :content, :color ])
   end
 end

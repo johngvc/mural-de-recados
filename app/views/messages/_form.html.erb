@@ -15,5 +15,12 @@
     <% end %>
   </div>
 
+  <div class="field">
+    <%= form.label :color, "Cor", class: "label" %>
+    <div class="select">
+      <%= form.select :color, [ [ "Amarelo", "yellow" ], [ "Rosa", "pink" ], [ "Azul", "blue" ], [ "Verde", "green" ] ] %>
+    </div>
+  </div>
+
   <%= form.submit submit_text, class: "button is-primary" %>
 <% end %>

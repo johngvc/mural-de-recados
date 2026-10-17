@@ -8,3 +8,8 @@
  *
  * Consider organizing styles into separate files for maintainability.
  */
+
+.card-yellow { background-color: #feecc3; }
+.card-pink   { background-color: #ffd6dd; }
+.card-blue   { background-color: #d6ecff; }
+.card-green  { background-color: #d4f5df; }

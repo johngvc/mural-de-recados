@@ -10,7 +10,7 @@
     <div class="columns is-multiline">
       <% @messages.each do |message| %>
         <div class="column is-one-quarter">
-          <div class="card has-background-warning-light">
+          <div class="card card-<%= message.color %>">
             <div class="card-content">
               <p><%= message.content %></p>
               <p class="is-italic">— <%= message.author %></p>
