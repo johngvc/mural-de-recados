@@ -14,6 +14,7 @@
             <div class="card-content">
               <p><%= message.content %></p>
               <p class="is-italic">— <%= message.author %></p>
+              <p class="is-size-7"><%= message.created_at.strftime("%d/%m/%Y às %H:%M") %></p>
               <div class="buttons mt-4">
                 <%= link_to "Editar", edit_message_path(message), class: "button is-small" %>
                 <%= button_to "Apagar", message, method: :delete, class: "button is-small is-danger", form: { data: { turbo_confirm: "Quer mesmo apagar este recado?" } } %>
