@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   def index
     @messages = Message.order(created_at: :desc)
+    @message = Message.new
   end
 
   def new
@@ -12,7 +13,8 @@ class MessagesController < ApplicationController
     if @message.save
       redirect_to root_path
     else
-      render :new, status: :unprocessable_entity
+      @messages = Message.order(created_at: :desc)
+      render :index, status: :unprocessable_entity
     end
   end
 
