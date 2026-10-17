@@ -1,6 +1,7 @@
 class MessagesController < ApplicationController
   def index
     @messages = Message.order(created_at: :desc)
+    @messages = @messages.where(color: params[:color]) if params[:color].present?
     @message = Message.new
   end
 

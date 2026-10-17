@@ -3,8 +3,19 @@
     <h1 class="title">Mural de recados do Rails Girls</h1>
     <%= render "form", message: @message, submit_text: "Postar recado" %>
 
+    <div class="buttons">
+      <%= link_to "Todos", root_path, class: "button is-small #{'is-dark' if params[:color].blank?}" %>
+      <% [ [ "Amarelo", "yellow" ], [ "Rosa", "pink" ], [ "Azul", "blue" ], [ "Verde", "green" ] ].each do |name, color| %>
+        <%= link_to name, root_path(color: color), class: "button is-small card-#{color} #{'is-dark' if params[:color] == color}" %>
+      <% end %>
+    </div>
+
     <% if @messages.empty? %>
-      <p>Ainda não tem nenhum recado. Que tal postar o primeiro?</p>
+      <% if params[:color].present? %>
+        <p>Nenhum recado com essa cor.</p>
+      <% else %>
+        <p>Ainda não tem nenhum recado. Que tal postar o primeiro?</p>
+      <% end %>
     <% end %>
 
     <div class="columns is-multiline">
